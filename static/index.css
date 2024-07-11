@@ -1,0 +1,160 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: url('/static/cerro-torre-mount-3840x2160-17220.jpg') center/cover no-repeat, rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Hide horizontal overflow */
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(20px);
+    z-index: -1;
+}
+
+/* Container styling */
+.container {
+    max-width: 600px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.658); /* Lightened white background */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Soft shadow */
+    transition: box-shadow 0.3s ease;
+    overflow: hidden; /* Hide box-shadow overflow */
+}
+
+.container:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5); /* Darker shadow on hover */
+}
+
+/* Header styling */
+h1 {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    color: #052242; /* Blue header text */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 30px; /* Larger font size */
+}
+
+/* Form styling */
+form {
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    resize: none; /* Disable vertical resizing */
+    transition: border-color 0.3s ease;
+    background-color: #f9f9f9a2; /* Light gray background */
+}
+
+textarea:focus {
+    border-color: #007bff; /* Blue border color on focus */
+    outline: none; /* Remove default focus outline */
+}
+
+label {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: #02101f; /* Dark gray label text */
+}
+
+select, input[type="submit"] {
+    font-family: 'Times New Roman', Times, serif;
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #e3e3eed0;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+select {
+    margin-bottom: 10px;
+    
+}
+
+input[type="submit"] {
+    border-radius: 10px;
+    background-color: #007bff; /* Blue button color */
+    color: #fff; /* White text color */
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+    margin-left: 140px;
+    width: 250px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Lift button on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Soft shadow on hover */
+}
+
+/* Results section styling */
+h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #007bff; /* Blue header text */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 28px; /* Larger font size */
+}
+
+p {
+    margin-bottom: 10px;
+    color: #140425; /* Dark gray text */
+    line-height: 1.8; /* Improved readability */
+}
+
+p.original-text {
+    font-style: italic;
+    color: #07062b; /* Light gray original text */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+}
